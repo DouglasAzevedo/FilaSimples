@@ -73,6 +73,7 @@ class ListaSimples{
 lista = new ListaSimples();
 lista.adicionarElemento(10);
 lista.adicionarElemento(20);
+lista.adicionarElemento(30);
 console.log(lista);
 lista.inserirPosicao(1,15);
 console.log(lista);
