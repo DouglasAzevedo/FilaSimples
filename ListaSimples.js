@@ -30,7 +30,31 @@ class ListaSimples{
 
     }
     //adicionar com base na posição do params
-    inserirPosicao(posicao, elemento){}
+    inserirPosicao(posicao, elemento){
+
+        if(posicao >=0 && posicao < this.length){
+            let item = new Item(elemento);
+            let itemAtual = this.head;
+            let itemAnterior = null;
+            let index = 0;
+
+        if(posicao === 0){
+            item.next = itemAtual;
+            this.head = item;
+        }else{
+
+            while(index++ < posicao){
+                itemAnterior = itemAtual;
+                itemAtual = itemAtual.next;
+            }
+
+            item.next = itemAtual;
+            itemAnterior.next = item;
+        }
+        this.length++;
+    }   
+
+    }
     //remoção do ultimo elemento
     removerElemento(){}
     //remover com base no params
@@ -49,4 +73,6 @@ class ListaSimples{
 lista = new ListaSimples();
 lista.adicionarElemento(10);
 lista.adicionarElemento(20);
-console.log|(lista);
+console.log(lista);
+lista.inserirPosicao(1,15);
+console.log(lista);
