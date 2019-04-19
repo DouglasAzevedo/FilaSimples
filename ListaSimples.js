@@ -42,7 +42,6 @@ class ListaSimples{
             item.next = itemAtual;
             this.head = item;
         }else{
-
             while(index++ < posicao){
                 itemAnterior = itemAtual;
                 itemAtual = itemAtual.next;
